@@ -1,0 +1,16 @@
+{
+  "name": "downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DownloadComment.js",
+  "dependencies": {
+    "csv-writer": "^1.5.0",
+    "google-play-scraper": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

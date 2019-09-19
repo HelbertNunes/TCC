@@ -10,10 +10,10 @@ function adicionaAplicativoCategoria(array, app, categoria) {
 }
 
 function filtraJson(jsonObj, i) {
-    var str = 'Assassins Creed Identity';
-    jsonObj.aplicativo = 'Assassins Creed Identity';
+    var str = 'Photomath';
+    jsonObj.aplicativo = 'Photomath';
     jsonObj.categoria = 'Ação';
-    adicionaAplicativoCategoria(jsonObj, 'Assassins Creed Identity', 'Ação');
+    adicionaAplicativoCategoria(jsonObj, 'Photomath', 'Education');
     const csvWriter = createCsvWriter({
         path: str.concat(i, '.csv'),
         header: [
@@ -31,7 +31,7 @@ function filtraJson(jsonObj, i) {
 }
 function coletadorDeComentarios(i) {
     gplay.reviews({
-        appId: 'com.ubisoft.assassinscreed.identity',
+        appId: 'com.microblink.photomath',
         page: i,
         lang: 'en'
     }).then(function (comentarios) { filtraJson(comentarios, i) }, console.log);

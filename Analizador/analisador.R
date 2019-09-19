@@ -10,7 +10,7 @@ library("SnowballC")
 library("wordcloud")
 library("RColorBrewer")
 #Script de criacao
-caminho <- "Z:/Playgroud/Arquivos Comentarios TCC/Comentarios.csv"
+caminho <- "Z:/Playgroud/Arquivos Comentarios TCC/Photomath.csv"
 comentarios <- read.csv(caminho)
 soComentarios <- comentarios$COMENTARIO
 docs <- Corpus(VectorSource(soComentarios))
@@ -40,7 +40,7 @@ dtm <- TermDocumentMatrix(docs)
 m <- as.matrix(dtm)
 v <- sort(rowSums(m),decreasing=TRUE)
 d <- data.frame(word = names(v),freq=v)
-head(d, 10)
+head(d, 100)
 
 set.seed(1234)
 wordcloud(words = d$word, freq = d$freq, min.freq = 1,
