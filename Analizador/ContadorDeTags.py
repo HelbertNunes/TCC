@@ -1,10 +1,10 @@
 
 
-file = open("/home/douglas/Documentos/TCC/MecTags.txt", "r")
+file = open("Z:\Playgroud\TCC\MacTags.txt", "r", encoding="utf8")
 
 for line in file:
     line = line.strip().upper()
-    filereviews = open("/home/douglas/Documentos/TCC/Photomath.csv", "r")
+    filereviews = open("Z:\Playgroud\TCC\Photomath.csv", "r", encoding="utf8")
     cont = 0
     for liner in filereviews:
         #print(liner)
